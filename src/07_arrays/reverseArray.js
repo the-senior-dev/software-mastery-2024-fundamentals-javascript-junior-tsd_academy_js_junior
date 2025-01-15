@@ -6,7 +6,17 @@
  * @returns {Array}
  */
 function reverseArray(arr) {
-    // Your code here
+  // Your code here
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    // Replace indexes in original array
+    [arr[left], arr[right]] = [arr[right], arr[left]];
+    left++;
+    right--;
+  }
+  return arr;
 }
 
 module.exports = reverseArray;
